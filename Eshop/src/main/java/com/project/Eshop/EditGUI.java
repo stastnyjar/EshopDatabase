@@ -97,7 +97,7 @@ public class EditGUI extends JFrame{
                     String newValue;
                     newValue = newValueField.getText();
                     try{
-                        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/products", "root", password);
+                        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/products", "engeto", password);
                         Statement statement = con.createStatement();
                         statement.executeUpdate(String.format("update products set %s = '%s' where id = '%s'", property, newValue, id));
                     }catch(SQLException ex){
